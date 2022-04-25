@@ -1,0 +1,77 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans',
+        'Gill Sans MT',
+        Calibri,
+        'Trebuchet MS',
+        sans-serif;
+}
+
+:root {
+    --primary-color: #fc38ce;
+    --secondary-color: #e7ed79;
+    --tertiary-color: #27bdce;
+    /* --primary-color-transparent: rgba(252, 225, 56, 0.8);
+    --secondary-color-transparent: rgba(2, 78, 118, 0.8); */
+}
+
+
+/* .hide {
+    display: none;
+} */
+
+h1 {
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 28px;
+}
+
+h3 {
+    text-align: center;
+}
+
+.main-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    /* You need to define an explicit height! */
+    height: 27vh;
+}
+
+
+
+/* .bingbong {
+   
+    width: 505px;
+    height: 84px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 68px;
+   
+} */
+
+.main-box {
+    border-style: solid;
+    width: 600px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.question-container {
+    border-style: solid;
+    border-color: var(--primary-color);
+    height: 208px;
+    width: 539px;
+    margin: 21px 24px 20px 26px;
+}
+
+.btn-grid {
+    display: grid;
+    gap: 10px;
+}
