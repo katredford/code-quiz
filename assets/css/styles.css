@@ -7,6 +7,12 @@ body {
         Calibri,
         'Trebuchet MS',
         sans-serif;
+
+    /* display: flex;
+        width: 100vw; */
+    height: 100vh;
+    justify-content: center;
+    /* align-items: center; */
 }
 
 :root {
@@ -18,9 +24,9 @@ body {
 }
 
 
-/* .hide {
+.hide {
     display: none;
-} */
+}
 
 h1 {
     font-weight: 400;
@@ -28,8 +34,27 @@ h1 {
     font-size: 28px;
 }
 
+.time-bar {
+    display: flex;
+    align-items: center;
+}
+
 h3 {
     text-align: center;
+    flex-wrap: wrap;
+    margin: 10px 10px 10px 10px;
+}
+
+.time-box {
+    border-style: solid;
+    width: 80px;
+    height: 50px;
+    margin: 10px 10px 10px 10px;
+}
+
+.timespot {
+    flex-wrap: wrap;
+    margin: 10px 10px 10px 16px;
 }
 
 .main-text {
@@ -45,22 +70,19 @@ h3 {
 
 
 
-/* .bingbong {
-   
-    width: 505px;
-    height: 84px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 68px;
-   
-} */
+.bingbong {
+
+    display: flex;
+
+}
 
 .main-box {
+
+
     border-style: solid;
     width: 600px;
     height: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px 60px 53px 49px;
 }
 
 .question-container {

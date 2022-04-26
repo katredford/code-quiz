@@ -24,7 +24,7 @@ var questions = [
 	},
 
 	{
-		title: "what to monarch caterpillars eat?",
+		title: "what do monarch caterpillars eat?",
 		correct: "milkweed",
 		answers: ["sandwich", "parsley", "milkweed", "daffodils"],
 	},

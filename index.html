@@ -12,19 +12,43 @@
 
 <body>
     <header>
-    <div class="main-text">
-        <h1>Code Quiz</h1>
-    </div>
+        <div class="main-text">
+            <h1>Code Quiz</h1>
+        </div>
     </header>
     <section class="bingbong">
-       
+
         <div class="main-box">
+            <div class="time-bar">
             <h3>click start to begin timer</h3>
+            <div class="time-box">
+            <h1 class="timespot">0:00</h1>
+            </div>
+            </div>
+
             <div id="question-container" class="hide">
                 <div id="question">Question</div>
-                <div id="answer-buttons" class="btn-grid">
-        </div>
+                <div id="answer-buttons" class="btn-grid"> </div>
+            </div>
+            <div class="controls">
+                <button id="startpart" class="start-btn btn ">Start
+                    <h3>click to start timer</h3>
+                </button>
+            </div>
 
+
+
+        </div>
+        <div class="scores">
+            <div id="scoreinput" >
+                <h1>put score here</h1>
+            </div>
+
+            <div class="highscore">
+                <h2>High Scores</h2>
+                <ol id="highscores"></ol>
+            </div>
+        </div>
     </section>
     <script src="./assets/js/questions.js"></script>
     <script src="./assets/js/script.js"></script>
