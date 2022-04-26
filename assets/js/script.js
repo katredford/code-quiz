@@ -1,4 +1,6 @@
 var questionIndex = 0;
+var gotRight = 1;
+var counter = 30;
 
 function startQuiz() {
 
@@ -15,7 +17,7 @@ function startQuiz() {
 				clearInterval(startCountdown);
 			}
 
-			var timeBox = document.getElementById("timepart");
+			var timeBox = document.getElementById("time-box");
 			timeBox.innerHTML = "";
 			var timePlace = document.createElement("timeSpot");
 			timePlace.setAttribute("class", "time");
