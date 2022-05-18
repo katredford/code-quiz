@@ -51,17 +51,26 @@ h3 {
     width: 80px;
     height: 50px;
     margin: 10px 10px 10px 10px;
+
+
 }
 
-.timespot {
+.timeSpot {
     flex-wrap: wrap;
-    margin: 10px 10px 10px 16px;
+    margin: 11px 9px 11px 23px;
+    /* font-weight: 400; */
+    text-transform: uppercase;
+    font-size: 28px;
 }
 
-.time {
+#time-title {
     font-size: 35px;
     flex-wrap: wrap;
-    margin: 10px 10px 10px 16px;
+    margin:0px 15px 23px 22px;
+    /* font-weight: 400; */
+    text-transform: uppercase;
+    font-size: 12px;
+
 }
 
 .main-text {

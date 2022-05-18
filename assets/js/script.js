@@ -1,6 +1,11 @@
 var questionIndex = 0;
 var gotRight = 1;
-var counter = 30;
+var counter = questions.length * 15;
+var counterId;
+
+
+var timeBox = document.getElementById("time-box");
+var timePlace = document.createElement("timeSpot");
 
 function startQuiz() {
 
@@ -9,23 +14,25 @@ function startQuiz() {
 
     	document.getElementById("startpart").onclick = function () {
 		document.getElementById("startpart").style.display = "none";
-		document.getElementById("question-container").classList.remove("hide");
-		var countdown = function () {
-			console.log(counter);
-			counter--;
-			if (counter === 0) {
-				clearInterval(startCountdown);
-			}
+            document.getElementById("question-container").classList.remove("hide");
+            
+		// var countdown = function () {
+		// 	console.log(counter);
+        //     countdown();
+		// 	counter--;
+		// 	if (counter === 0) {
+		// 		clearInterval(startCountdown);
+		// 	}
 
-			var timeBox = document.getElementById("time-box");
+			
 			timeBox.innerHTML = "";
-			var timePlace = document.createElement("timeSpot");
+			
 			timePlace.setAttribute("class", "time");
-			timePlace.innerText = counter;
+			timePlace.textContent = counter;
 
 			timeBox.appendChild(timePlace);
-		};
-		var startCountdown = setInterval(countdown, 1000);
+		 
+		counterId = setInterval(countdown, 1000);
         };
     
     function nextQuestion() {
@@ -40,7 +47,7 @@ function startQuiz() {
 			var anwserButton = document.createElement("button");
 			//2 Dress that html up how u want!! give it text . class name ect...
 			anwserButton.setAttribute("class", "btn choice-btn");
-			anwserButton.innerText = answer;
+			anwserButton.textContent = answer;
             
 			//3 Stick that shabang on the page!! .appendCHild or jquery .append()
 			answerGrid.appendChild(anwserButton);
@@ -56,9 +63,9 @@ function startQuiz() {
     nextQuestion();
     
     function handleClick(event) {
-		console.log("we got clicked", event.target.innerText);
+		console.log("we got clicked", event.target.textContent);
 
-		if (event.target.innerText === questions[questionIndex].correct) {
+		if (event.target.textContent === questions[questionIndex].correct) {
 			console.log("good", gotRight);
 
 			var scoreBox = document.getElementById("scorepart");
@@ -69,7 +76,13 @@ function startQuiz() {
 
 			scoreBox.appendChild(scorePlace);
 		} else {
-			console.log("bad");
+            // console.log("bad");
+            // counter -= 15;
+            // if (counter < 0) {
+            //     counter = 0;
+            // }
+            // timeBox.textContent = counter;
+			
 		}
 
 		questionIndex++;
@@ -81,7 +94,31 @@ function startQuiz() {
 		} else {
 			nextQuestion();
 		}
-	}
+    }
+    
+    function endQuiz() {
+        clearInterval(counterId);
+
+        var endScreenEl = document.getElementById("end-screen");
+        endScreenEl.removeAttribute("class");
+
+        var finalScoreEl = document.getElementById("final-score")
+        finalScoreEl.textContent = counter;
+
+        questionIndex.setAttribute("class", "hide");
+    }
+
+
+    function countdown() {
+        counter--;
+        timePlace.innerText = counter;
+
+        if (counter <= 0) {
+            endQuiz();
+        }
+        
+    }
+
 }
 startQuiz();
 
